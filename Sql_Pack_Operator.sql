@@ -1,24 +1,5 @@
 POC_TEMPORAL_DATA_PACK_Plus_N_Jours_OPERATOR.sql
 
-m
-Type
-SQL
-Taille
-40 Ko (40 799 octets)
-Espace de stockage utilisé
-40 Ko (40 799 octets)
-Emplacement
-03_POC
-Propriétaire
-moi
-Modifié
-le 7 déc. 2018 par moi
-Ouvert
-le 12:03 par moi
-Créé
-7 déc. 2018 avec Google Drive Web
-Ajouter une description
-Les lecteurs peuvent télécharger
 -- ================================================================================================================================
 -- POC_TEMPORAL_DATA_PACK_Plus_N_Jours_OPERATOR.sql
 --
@@ -740,7 +721,7 @@ with each_level (empno, name, hiredate, mgr) as
 SEARCH DEPTH FIRST BY HIREDATE SET IDX
 select name, hiredate, idx  from each_level;"	"SQL> select * from messages;
 TXT
-óóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóóó
+--------------------------------------------------------------------------
 I caught up with Connor and Maria Colgan today. They have taken over
 AskTOM for Oracle Developers
 sql> select * from twitter_handles;
@@ -1177,7 +1158,8 @@ select a.ID,
 select ID, INDICE,/*LINE,*/ TOKEN
   from lIter
 order by ID, indice;
-"	"-- Reverse
+
+ -- Reverse
 with
 lPhrase as (
 select 'abc' as phrase
