@@ -880,7 +880,10 @@ select substr(pLabel, 1, length(pLabel) - 1), substr(pLabel, length(pLabel) - 1,
 select pLabel, pLettre,
        count(*) over (partition by pLettre) as cnt
   from lIter
-order by 2;"	"with lFactoriel(pNombre, pAcc) as (
+order by 2;
+
+--vFactoriel              
+with lFactoriel(pNombre, pAcc) as (
 select 17 as nombre, 1 as acc
   from dual
 union all
@@ -888,7 +891,9 @@ select pNombre - 1, pAcc * pNombre
   from lFactoriel
  where pNombre > 1)
 select pNombre, pAcc
-  from lFactoriel;"	"create or replace procedure pgcd(pN1 in pls_integer, pN2 in pls_integer) is
+  from lFactoriel;
+--              
+create or replace procedure pgcd(pN1 in pls_integer, pN2 in pls_integer) is
    lReste   pls_integer;
 begin
    dbms_output.put_line('N1 = ' || pN1 || ' ; N2 = ' || pN2);
