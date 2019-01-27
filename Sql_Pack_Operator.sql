@@ -654,7 +654,7 @@ from   each_level;
 
 
 
-"	"with each_level (empno, name, mgr, rlevel) as
+with each_level (empno, name, mgr, rlevel) as
 ( select empno, ename, mgr, 1 rlevel
   from   emp
   where  mgr is null
