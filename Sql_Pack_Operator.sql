@@ -1138,7 +1138,9 @@ select b.INDICE + 1                                 as INDICE,
 select INDICE,/*LINE,*/ TOKEN
   from lIter
 order by TOKEN;
-"	"with       /* CSV LINE PARSER */
+
+--  CSV LINE PARSER
+with       /* CSV LINE PARSER */
 lInputLines as
 (select 1 as id, 'C:\Users\Connor\Presentations\2002\254old.ppt' || '\'     as LINE from dual
  union all
@@ -1177,7 +1179,9 @@ union all
     from lIter
   where pInd > 0)
 select *
-  from lIter;"	"-- Reverse : Sole medere pede ede perede melos
+  from lIter;
+ 
+-- Reverse : Sole medere pede ede perede melos
 with
 lPhrase as (
 select 'sole medere pede ede perede melos' as phrase
@@ -1195,7 +1199,9 @@ union all
 select *
   from lIter
 order by pInd asc
-fetch first row only;"	"-- Reverse : Sole medere pede ede perede melos
+fetch first row only;
+ 
+-- Reverse : Sole medere pede ede perede melos
 with
 lPhrase as (
 select 'sole medere pede ede perede melos' as phrase
